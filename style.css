@@ -1,0 +1,320 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: RubiksLight;
+  src: url(/Rubik/static/Rubik-Light.ttf);
+}
+@font-face {
+  font-family: RubiksReg;
+  src: url(/Rubik/static/Rubik-Regular.ttf)
+}
+@font-face {
+  font-family: RubiksBold;
+  src: url(/Rubik/static/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: RubiksSBold;
+  src: url(/Rubik/static/Rubik-SemiBold.ttf);
+}
+ body {
+   font-size: 16px;
+   text-align: center;
+ }
+ul {list-style-type: none;} 
+ header {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 20px;
+   background: #ffffff;
+ }
+ header input,  label .close{
+   display: none;
+ }
+
+ header nav {
+  position: absolute;
+  top:100%;
+  left: 10%;
+  width: 80%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 250ms ease-in;
+  z-index: 55;
+}
+nav ul {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  font-family: RubiksReg;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3rem;
+ 
+}
+.overlay {
+  display: none;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsl(229, 31%, 21%);
+  opacity: .9;
+}
+header nav ul li {
+  padding: 20px;
+  border-top: 1px solid hsl(229, 8%, 40%) ;
+  text-transform: uppercase;
+ }
+
+ header nav ul li:last-child a {
+    border: solid;
+    padding: 8px 50px;
+    border-radius: 5px;
+ }
+
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+ #menu:checked ~ nav {
+  transform: scale(1,1);
+}
+#menu:checked ~ label  .hamburger {
+  display: none;
+}
+#menu:checked ~ label .close {
+  display: block;
+}
+#menu:checked ~ .overlay {
+  display: block;
+}
+.section-1 {
+  width: 100%;
+  padding: 0 50px;
+
+}
+.section-1 .section-1-image {
+  width: 100%;
+  margin: 20px auto; 
+  position: relative;
+  border: red solid 1px;
+}
+.section-1 img {width: 100%;}
+.section-1 .section-1-image::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  z-index: -1;
+  width: 80%;
+  height: 70%;
+  background: hsl(231, 69%, 60%);
+  border-bottom-left-radius:  35%;
+}
+.section-1-details {padding: 20px 0 40px 0;}
+.section-1-details h1 {
+  font-size: 2rem;
+  padding: 10px 30px;
+  font-family: RubiksBold;
+}
+.section-1-details p {
+  font-size: 1rem;
+  font-family: RubiksReg;
+  color: hsl(229, 8%, 70%);
+  padding: 20px 0;
+}
+.section-1-details a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 30px;
+  background:  hsl(231, 69%, 60%);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-family: RubiksReg;
+  margin-bottom: 30px;
+}
+.section-1-details a:nth-of-type(2) {
+  background: hsl(229, 8%, 98%);;
+  opacity: 0.9;
+  color: hsl(229, 8%, 70%);
+  margin-left: 10px;
+}
+.section-2 {
+  padding: 40px 30px;
+  width: 100%;
+}
+.section-2 h2 {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  font-family: RubiksBold;
+  color: hsl(229, 31%, 41%);
+}
+.section-2 p {
+  font-size: 1rem;
+  font-family: RubiksReg;
+  color: hsl(229, 8%, 70%);
+  padding: 10px 0 30px 0;
+}
+.section-2 ul {
+  list-style-type: none;
+  font-family: RubiksReg;
+  color: hsl(229, 8%, 70%);
+  padding: 0 0 20px 0;
+  width: 80%;
+  margin: auto;
+}
+.section-2 ul li {
+  padding: 20px 0;
+  border-top: 1px solid hsl(229, 8%, 40%) ;
+}
+.section-2 ul li:nth-child(3) {
+  border-bottom: 1px solid hsl(229, 8%, 40%) ;
+}
+.section-2 .tab-content-image {
+  width: 100%;
+  padding: 30px 0;
+  margin: 20px auto; 
+  position: relative;
+  /* border: red solid 1px; */
+}
+.section-2 .tab-content-image img {
+  width: 100%;
+  object-fit: cover;
+}
+.section-2 .tab-content-image::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  z-index: -1;
+  width: 80%;
+  height: 70%;
+  background: hsl(231, 69%, 60%);
+  border-bottom-right-radius:  35%;
+}
+.section-2 .tab-content {
+  width: 100%;
+  padding: 30px 0;
+}
+.section-2 .tab-content h3 {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  font-family: RubiksBold;
+  color: hsl(229, 31%, 41%);
+}
+.section-3 {padding: 30px 30px;}
+.section-3 h2 {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  font-family: RubiksBold;
+  color: hsl(229, 31%, 41%);
+}
+.section-3 p {
+  font-size: 1rem;
+  font-family: RubiksReg;
+  color: hsl(229, 8%, 70%);
+  padding: 10px 0 30px 0;
+}
+.section-3 ul {
+  list-style-type: none;
+}
+.section-3 .box {
+  padding: 20px 30px;
+  margin: 20px auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  background: url(/images/bg-dots.svg) no-repeat bottom 25% right 0/contain;
+  border-radius: 10px;
+}
+.section-3 .box img {padding: 20px 0;}
+.section-3 .box h5 {
+  font-size: .9rem;
+  font-family: RubiksBold;
+  color: hsl(229, 31%, 41%);
+}
+.section-3 .box p {padding: 10px 0 50px 0;}
+.section-3 .box button {
+  margin: 25px 0 10px 0;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  background: hsl(231, 69%, 60%);
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: RubiksSBold;
+}
+.section-4 {
+  width: 80%;
+  margin: auto;
+}
+.section-4 h2 {
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  font-family: RubiksBold;
+  color: hsl(229, 31%, 41%);
+}
+.section-4 p {
+  font-size: 1rem;
+  font-family: RubiksReg;
+  color: hsl(229, 8%, 70%);
+  padding: 10px 0 30px 0;
+}
+.section-4 .accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-4 .accordion img {
+  border: 1px solid red;
+  margin-top: -20px;
+}
+.section-4 a {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: RubiksSBold;
+  padding: 15px 30px;
+  background: hsl(231, 69%, 60%);
+} 
+footer .section-a {
+  padding: 30px 0;
+  margin-top: 40px;
+  background: hsl(231, 69%, 60%);
+}
+footer .section-a p {
+  font-size: 1rem;
+  font-family: RubiksLight;
+  color: #ffffff;
+  padding: 15px  0;
+}
+footer .section-a h6 {
+  font-size: 1.5rem;
+  padding: 10px 70px;
+  font-family: RubiksSBold;
+  color: #ffffff;
+}
+footer .section-b {
+  padding: 30px 0;
+  background: hsl(229, 31%, 30%);
+}
+footer .section-b ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #ffffff;
+  font-family: RubiksSBold;
+}
+footer .section-b ul:nth-of-type(2) {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}

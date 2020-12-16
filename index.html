@@ -5,14 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Bookmark landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <header>
@@ -24,7 +19,6 @@
         <li><a href=""> Pricing</a></li>
         <li><a href=""> Contact</a></li>
         <li><a href=""> Login</a></li>
-        <li><a href=""> Careers</a></li>
       </ul>
     </nav>
     <label for="menu">
@@ -35,7 +29,10 @@
   </header>
   <main>
     <section class='section-1'>
-      <img src="/images/illustration-hero.svg" alt="phones">
+      <div class="section-1-image">
+        <img src="/images/illustration-hero.svg" alt="phones">
+      </div>
+      
       <div class="section-1-details">
         <h1>A Simple Bookmark Manager</h1>
         <p> A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
@@ -53,32 +50,36 @@
       </ul>
       <div class="tab-content">
         <div id="Simple">
-          <img src="/images/illustration-features-tab-1.svg" alt="">
+          <div class="tab-content-image">
+            <img src="/images/illustration-features-tab-1.svg" alt="illustration for simple bookmarking">
+          </div>
           <div class="tab-content">
             <h3>Bookmark in one click</h3>
             <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-            </p>
-            <a href="">More Info</a>  
+            </p> 
           </div>
         </div>
 
         <div id="Speedy">
-          <img src="/images/illustration-features-tab-2.svg" alt="">
+          <div class="tab-content-image">
+            <img src="/images/illustration-features-tab-2.svg" alt="illustration for Speedy Searching">
+          </div>
           <div class="tab-content">
             <h3> Intelligent search</h3>
             <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
             </p>
-            <a href="">More Info</a>
           </div>
         </div>
 
         <div id="Sharing">
-          <img src="/images/illustration-features-tab-3.svg" alt="">
+          <div class="tab-content-image">
+            <img src="/images/illustration-features-tab-3.svg" alt="illustration for sharing bookmarks">
+          </div>
+         
           <div class="tab-content">
             <h3> Share your bookmarks</h3>
             <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
             </p>
-            <a href="">More Info</a>
           </div>
         </div>
       </div>
@@ -89,24 +90,27 @@
 
       <h2>Download the extension</h2>
       <p> We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
-      <div class="box">
-        <img src="/images/logo-chrome.svg" alt="">
-        <h5> Add to Chrome</h5>
-        <p>Minimum version 62</p>
-        <button> Add & Install Extension</button>
-      </div>
-      <div class="box">
-        <img src="/images/logo-firefox.svg" alt="">
-        <h5> Add to Firefox</h5>
-        <p>Minimum version 55</p>
-        <button> Add & Install Extension</button>
-      </div>
-      <div class="box">
-        <img src="/images/logo-firefox.svg" alt="">
-        <h5> Add to Opera</h5>
-        <p>Minimum version 46</p>
-        <button> Add & Install Extension</button>
-      </div>
+      <ul>
+        <li class="box">
+          <img src="/images/logo-chrome.svg" alt="">
+          <h5> Add to Chrome</h5>
+          <p>Minimum version 62</p>
+          <button> Add & Install Extension</button>
+        </li>
+        <li class="box">
+          <img src="/images/logo-firefox.svg" alt="">
+          <h5> Add to Firefox</h5>
+          <p>Minimum version 55</p>
+          <button> Add & Install Extension</button>
+        </li>
+        <li class="box">
+          <img src="/images/logo-opera.svg" alt="">
+          <h5> Add to Opera</h5>
+          <p>Minimum version 46</p>
+          <button> Add & Install Extension</button>
+        </li>
+      </ul>
+      
     </section>
 
     <section class="section-4">
