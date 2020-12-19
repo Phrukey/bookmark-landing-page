@@ -11,8 +11,8 @@
 </head>
 <body>
   <header>
-    <img src="/images/logo-bookmark.svg" alt="Easybank logo">
     <input type="checkbox" name="menu" id="menu">
+    <img src="/images/logo-bookmark.svg" alt="Easybank logo" class="logo">
     <nav>
       <ul>
         <li><a href=""> Features</a></li>
@@ -36,47 +36,47 @@
       <div class="section-1-details">
         <h1>A Simple Bookmark Manager</h1>
         <p> A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-        <a href="/" class="invite-btn">Get it on Chrome</a>
-        <a href="/" class="invite-btn">Get it on Firefox</a>
+        <a href="/" class="invite-btn" class="chrome">Get it on Chrome</a>
+        <a href="/" class="invite-btn" class="firefox">Get it on Firefox</a>
       </div>
     </section>
+
     <section class="section-2">
       <h2>Features</h2>
       <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
-      <ul>
-        <li>Simple Bookmarking</li>
-        <li>Speedy Searching</li>
-        <li>Easy Sharing</li>
+      <ul class="tab">
+        <li data-tab-target="#Simple" class="active tab">Simple Bookmarking</li>
+        <li data-tab-target="#Speedy" class="tab">Speedy Searching</li>
+        <li data-tab-target="#Sharing" class="tab">Easy Sharing</li>
       </ul>
       <div class="tab-content">
-        <div id="Simple">
+        <div id="Simple" data-tab-content class="active">
           <div class="tab-content-image">
             <img src="/images/illustration-features-tab-1.svg" alt="illustration for simple bookmarking">
           </div>
-          <div class="tab-content">
+          <div class="details">
             <h3>Bookmark in one click</h3>
             <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
             </p> 
           </div>
         </div>
 
-        <div id="Speedy">
+        <div id="Speedy" data-tab-content>
           <div class="tab-content-image">
             <img src="/images/illustration-features-tab-2.svg" alt="illustration for Speedy Searching">
           </div>
-          <div class="tab-content">
+          <div class="details">
             <h3> Intelligent search</h3>
             <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.
             </p>
           </div>
         </div>
 
-        <div id="Sharing">
+        <div id="Sharing" data-tab-content>
           <div class="tab-content-image">
             <img src="/images/illustration-features-tab-3.svg" alt="illustration for sharing bookmarks">
           </div>
-         
-          <div class="tab-content">
+          <div class="details">
             <h3> Share your bookmarks</h3>
             <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.
             </p>
@@ -87,7 +87,6 @@
 
 
     <section class="section-3">
-
       <h2>Download the extension</h2>
       <p> We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
       <ul>
@@ -122,48 +121,60 @@
       <ul class="accordion-container">
         <li>
           <div class="accordion">
-            <p>What is Bookmark?</p>
-            <img src="/images/icon-arrow.svg" alt="">
+            <div class="question">
+              <p>What is Bookmark?</p>
+              <img src="/images/icon-arrow.svg" alt="">
+            </div>
+            <p class="dropdown hideText">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+            </p> 
           </div>
-          <p class="dropdown">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-          </p> 
+         
         </li>
 
         <li>
         <div class="accordion">
-          <p> How can I request a new browser?</p>
-          <img src="/images/icon-arrow.svg" alt="">
+          <div class="question">
+            <p> How can I request a new browser?</p>
+            <img src="/images/icon-arrow.svg" alt="">
+          </div>
+          <p class="dropdown hideText">
+            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          </p> 
         </div>
-        <p class="dropdown">
-          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-          Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-          ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-        </p> 
+       
       </li>
 
       <li>
         <div class="accordion">
-          <p> Is there a mobile app?</p>
-          <img src="/images/icon-arrow.svg" alt="">
+          <div class="question">
+            <p> Is there a mobile app?</p>
+            <img src="/images/icon-arrow.svg" alt="">
+          </div>
+          <p class="dropdown hideText">
+            Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+            sollicitudin ex et ultricies bibendum.
+          
+          </p> 
         </div>
-        <p class="dropdown">
-          Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-          urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-          sollicitudin ex et ultricies bibendum.
         
-        </p> 
       </li>
        
-      <li>
+      <li >
         <div class="accordion">
-          <p> What about other Chromium browsers?</p>
-          <img src="/images/icon-arrow.svg" alt="">
+          <div class=" question last">
+            <p> What about other Chromium browsers?</p>
+            <img src="/images/icon-arrow.svg" alt="">
+          </div>
+          <p class="dropdown hideText">
+            Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
+          </p> 
         </div>
-        <p class="dropdown">
-          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
-        </p> 
+       
       </li>
 
       </ul>  
@@ -177,6 +188,7 @@
         <h6>Stay up-to-date with what we’re doing</h6>
         <form >
           <input type="text">
+          <small>Whoops, make sure it's an email</small>
           <img src="/images/icon-error.svg" alt="">
           <button>Contact Us</button>
         </form>
@@ -194,5 +206,6 @@
         </ul>
       </div>
     </footer>
+  <script src="main.js"></script>
 </body>
 </html>
