@@ -24,6 +24,10 @@
    text-align: center;
  }
 ul {list-style-type: none;} 
+.word {
+  font-family: RubiksReg;
+  color: hsl(229, 8%, 70%);
+}
  header {
    position: relative;
    display: flex;
@@ -105,7 +109,6 @@ header nav ul li a {
 .section-1 {
   width: 100%;
   padding: 50px 50px;
-  /* border: red solid 1px;  */
 }
 .section-1 .section-1-image {
   width: 100%;
@@ -131,9 +134,6 @@ header nav ul li a {
   font-family: RubiksBold;
 }
 .section-1-details p {
-  font-size: 1rem;
-  font-family: RubiksReg;
-  color: hsl(229, 8%, 70%);
   padding: 20px 0;
 }
 .section-1-details a {
@@ -164,9 +164,6 @@ header nav ul li a {
   color: hsl(229, 31%, 41%);
 }
 .section-2 p {
-  font-size: 1rem;
-  font-family: RubiksReg;
-  color: hsl(229, 8%, 70%);
   padding: 10px 0 30px 0;
 }
 .section-2 ul {
@@ -291,9 +288,6 @@ header nav ul li a {
   color: hsl(229, 31%, 41%);
 }
 .section-4 p {
-  font-size: 1rem;
-  font-family: RubiksReg;
-  color: hsl(229, 8%, 70%);
   text-align: left;  
 }
 .section-4 > p {
@@ -340,13 +334,12 @@ header nav ul li a {
   background: hsl(231, 69%, 60%);
 } 
 footer .section-a {
-  border: red solid 1px;
+  /* border: red solid 1px; */
   padding: 30px 0;
   margin-top: 40px;
   background: hsl(231, 69%, 60%);
 }
 footer .section-a p {
-  font-size: 1rem;
   font-family: RubiksLight;
   color: #ffffff;
   padding: 15px  0;
@@ -358,9 +351,12 @@ footer .section-a h6 {
   color: #ffffff;
 }
 footer .section-a form {
-  position: relative;
   width: 50%;
   margin: 0 auto;
+}
+footer .section-a .form-group {
+  position: relative;
+  width: 100%;
 }
 footer .section-a img {
   position: absolute;
@@ -368,10 +364,13 @@ footer .section-a img {
   right: 5px;
   display: none;
 }
-footer .section-a input {
+footer .section-a .form-group input {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 10px;
   width: 100%;
-  padding: 10px;
   outline: none;
   border: none;
   border-radius: 5px;
@@ -381,11 +380,12 @@ footer .section-a small{
   background: hsl(0, 94%, 66%);
   display: block;
   color: #ffffff;
-  padding: 5px 0;
+  padding: 45px 0 5px 0;
   border-radius: 5px;
-  margin-top: -5px;
+  font-family: RubiksReg;
+  text-align: left;
   z-index: -1;
-  display: none;
+  visibility: hidden;
 }
 footer .section-a button {
   width: 100%;
@@ -420,7 +420,6 @@ footer .section-b ul:nth-of-type(2) {
   header {
     width: 90%;
     margin: auto;
-    /* border: 1px solid red; */
   }
   header nav {
     all: unset; 
@@ -428,6 +427,8 @@ footer .section-b ul:nth-of-type(2) {
   header nav ul {
     display: flex;
     gap: 15px;
+    align-items: center;
+    justify-content: center;
   }
   header label {display: none;}
   header nav ul li {
@@ -437,7 +438,7 @@ footer .section-b ul:nth-of-type(2) {
   }
   header nav ul li a {
     color: hsl(229, 31%, 21%);
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   header nav ul li a:hover {
     color: hsl(0, 94%, 66%);
@@ -540,6 +541,7 @@ footer .section-b ul:nth-of-type(2) {
   .section-4 {
     max-width: 800px;
   }
+
   .section-4 ul li:hover {
     cursor: pointer;
   }
@@ -558,6 +560,7 @@ footer .section-b ul:nth-of-type(2) {
   }
   footer .section-a form button {
     width: 20%;
+    margin-top: -22px;
   }
   footer .section-b {
     display: grid;
@@ -569,4 +572,5 @@ footer .section-b ul:nth-of-type(2) {
     display: flex;
     gap: 30px;
   }
+  footer .section-b ul li a:hover {color: hsl(0, 94%, 66%);}
 }

@@ -1,7 +1,7 @@
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
 const accordions = document.querySelectorAll('.accordion');
-const input = document.querySelector('input');
+const input = document.querySelector('form input');
 const btn = document.querySelector('footer button');
 const alert = document.querySelector('small');
 const errorImage = document.querySelector('form img')
@@ -29,7 +29,6 @@ accordions.forEach(accordion => {
   
 
   accordion.addEventListener('click', e => {
-    if(e.target.parentElement.className = "question") {
       dropdowns.forEach(drop => {
         let dropIcon = drop.previousElementSibling.lastElementChild;
         if(dropdown !== drop) {
@@ -41,20 +40,21 @@ accordions.forEach(accordion => {
       
       dropdown.classList.toggle('hideText');
       icon.style.transform = 'rotate(0)' ? icon.style.transform = 'rotate(180deg)' : icon.style.transform = 'rotate(0)';
-    }
+    
   })
 })
 
 btn.addEventListener('click', e => {
   e.preventDefault();
   let emailValue = input.value.trim();
-  if(emailValue === ' ' || !isEmail(emailValue)) {
-    alert.style.display = 'block';
+  if(!isEmail(emailValue)) {
+    alert.style.visibility = 'visible';
     errorImage.style.display = 'block';
-    console.log("goat");
 	} else {
-    alert.style.display = "none";
+    alert.style.visibility = "hidden";
     input.value = " ";
+    errorImage.style.display = 'none';
+    console.log(input.value)
   }
   
 })
