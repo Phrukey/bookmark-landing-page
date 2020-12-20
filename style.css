@@ -28,6 +28,10 @@ ul {list-style-type: none;}
   font-family: RubiksReg;
   color: hsl(229, 8%, 70%);
 }
+.heading {
+  font-family: RubiksBold;
+  color: hsl(229, 31%, 41%);
+}
  header {
    position: relative;
    display: flex;
@@ -131,7 +135,6 @@ header nav ul li a {
 .section-1-details h1 {
   font-size: 2rem;
   padding: 10px 30px;
-  font-family: RubiksBold;
 }
 .section-1-details p {
   padding: 20px 0;
@@ -159,9 +162,7 @@ header nav ul li a {
 }
 .section-2 h2 {
   font-size: 1.5rem;
-  padding: 10px 30px;
-  font-family: RubiksBold;
-  color: hsl(229, 31%, 41%);
+  padding: 10px 30px; 
 }
 .section-2 p {
   padding: 10px 0 30px 0;
@@ -214,8 +215,6 @@ header nav ul li a {
 .section-2 .tab-content h3 {
   font-size: 1.5rem;
   padding: 10px 30px;
-  font-family: RubiksBold;
-  color: hsl(229, 31%, 41%);
 }
 [data-tab-content] {
   display: none;
@@ -240,8 +239,6 @@ header nav ul li a {
 .section-3 h2 {
   font-size: 1.5rem;
   padding: 10px 30px;
-  font-family: RubiksBold;
-  color: hsl(229, 31%, 41%);
 }
 .section-3 p {
   font-size: 1rem;
@@ -263,8 +260,6 @@ header nav ul li a {
 .section-3 .box img {padding: 20px 0;}
 .section-3 .box h5 {
   font-size: .9rem;
-  font-family: RubiksBold;
-  color: hsl(229, 31%, 41%);
 }
 .section-3 .box p {padding: 10px 0 50px 0;}
 .section-3 .box button {
@@ -284,8 +279,6 @@ header nav ul li a {
 .section-4 h3 {
   font-size: 1.5rem;
   padding: 10px 30px;
-  font-family: RubiksBold;
-  color: hsl(229, 31%, 41%);
 }
 .section-4 p {
   text-align: left;  
@@ -334,7 +327,6 @@ header nav ul li a {
   background: hsl(231, 69%, 60%);
 } 
 footer .section-a {
-  /* border: red solid 1px; */
   padding: 30px 0;
   margin-top: 40px;
   background: hsl(231, 69%, 60%);
@@ -429,6 +421,7 @@ footer .section-b ul:nth-of-type(2) {
     gap: 15px;
     align-items: center;
     justify-content: center;
+    margin-top: 0;
   }
   header label {display: none;}
   header nav ul li {
@@ -541,7 +534,6 @@ footer .section-b ul:nth-of-type(2) {
   .section-4 {
     max-width: 800px;
   }
-
   .section-4 ul li:hover {
     cursor: pointer;
   }
@@ -553,7 +545,6 @@ footer .section-b ul:nth-of-type(2) {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    /* border: 1px solid red; */
   }
   footer .section-a form input {
     width: 80%;
